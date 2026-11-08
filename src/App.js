@@ -1,13 +1,25 @@
 import './app.css';
+import { useState } from 'react';
 function App() {
+  const [showMore, setShowMore] = useState(false);
+  const [showLess, setShowLess] = useState(false);
+  function HandleShowMore() {
+    setShowMore(!showMore);
+  }
   return (
     <>
       <div className='expandler'>
         <h1>personal details</h1>
-        <span>
-          my name is anwar tarek iam graduated from faculty of engineering
-          mansoura university, from department computer and control system
-          department
+        <span onClick={HandleShowMore}>
+          my name is anwar tarek
+          {showMore ? (
+            <span className='showMore'>
+              iam graduated from faculty of engineering mansoura university,
+              from department computer and control system department
+            </span>
+          ) : (
+            '.....'
+          )}
         </span>
         <hr />
         <span>

@@ -17,3 +17,10 @@ h1 {
   color: transparent;
   text-transform: capitalize;
 }
+span {
+  cursor: pointer;
+}
+.showMore {
+  margin-left: 4px;
+  color: #00b09b;
+}
