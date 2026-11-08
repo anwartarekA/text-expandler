@@ -1,3 +1,4 @@
+import './app.css';
 function App() {
   return (
     <>
@@ -8,6 +9,7 @@ function App() {
           mansoura university, from department computer and control system
           department
         </span>
+        <hr />
         <span>
           i studied web development for five years backend and frontend, i
           learned many technologies like html5, css3 and many programming
