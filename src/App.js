@@ -6,6 +6,9 @@ function App() {
   function HandleShowMore() {
     setShowMore(!showMore);
   }
+  function handleShowLess2() {
+    setShowMore((prev) => (showMore === true ? false : true));
+  }
   function handleShowLess() {
     setShowLess(!showLess);
   }
@@ -16,15 +19,23 @@ function App() {
     <>
       <div className='expandler'>
         <h1>personal details</h1>
-        <span onClick={HandleShowMore}>
-          my name is anwar tarek
+        <span>
           {showMore ? (
-            <span className='showMore'>
-              iam graduated from faculty of engineering mansoura university,
-              from department computer and control system department
+            <span>
+              my name is anwar tarek iam graduated from faculty of engineering
+              mansoura university, from department computer and control system
+              department{' '}
+              <span className='showLess' onClick={handleShowLess2}>
+                show less...
+              </span>
             </span>
           ) : (
-            <span className='showMore'>show more...</span>
+            <span>
+              my name is anwar tarek{' '}
+              <span className='showMore' onClick={HandleShowMore}>
+                show more...
+              </span>
+            </span>
           )}
         </span>
         <hr />
@@ -44,7 +55,7 @@ function App() {
               language like javascript and node js also typescript and databases
               like postgresql, mysql and also mongodb, sqlite and sobabase.
               <span className='showLess' onClick={handleShowLess}>
-                show less
+                show less...
               </span>
             </span>
           )}
