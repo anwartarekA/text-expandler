@@ -22,5 +22,15 @@ span {
 }
 .showMore {
   margin-left: 4px;
+  color: #6ed3c7;
+  transition: all 0.3s;
+}
+.showLess {
+  margin-left: 2px;
+  color: #6ed3c7;
+  transition: all 0.3s;
+}
+.showMore:hover,
+.showLess:hover {
   color: #00b09b;
 }
